@@ -205,3 +205,65 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ==============================================================
+# Dream 7B, Drug Discovery & ML Specifics
+# ==============================================================
+
+# Model Checkpoints & Weights
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+models/checkpoints/
+lora_adapters/
+outputs/
+
+# Hugging Face Cache
+.huggingface/
+hf_cache/
+
+# Datasets & Chemistry Files (ZINC250K)
+# Ignore everything in data/ but keep the directory structure
+data/*
+!data/.gitkeep
+!data/README.md
+*.smi
+*.sdf
+*.mol2
+*.parquet
+*.csv
+
+# Preprocessed Data & Arrays (SELFIES, Tokenized inputs)
+*.npy
+*.npz
+*.pkl
+*.h5
+*.pt.cache
+
+# Logs & Experiment Tracking
+wandb/
+runs/
+tensorboard/
+logs/
+tb_logs/
+
+# RL & Generation Outputs
+generated_molecules/
+reward_caches/
+trajectory_logs/
+
+# Cluster / Slurm Outputs
+slurm-*.out
+slurm-*.err
+core.*
+
+# OS Generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

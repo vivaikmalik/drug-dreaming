@@ -1,0 +1,20 @@
+# Deep Learning & LLM Infrastructure
+torch>=2.1.0
+transformers>=4.36.0
+accelerate
+peft
+datasets
+einops
+tiktoken
+
+# Cheminformatics & Molecular Representations
+rdkit
+selfies
+pandas
+scikit-learn
+
+# RL, GFlowNet, and Experiment Tracking
+trl
+wandb
+tensorboard
+tqdm
