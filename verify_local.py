@@ -51,7 +51,7 @@ def generate_local(target_property=3.5):
     base_model = modeling_dream.DreamModel.from_pretrained(
         config_dir,
         config=config,
-        torch_dtype=torch.float16,
+        torch_dtype=torch.float32,
         device_map={"":"cpu"}
     )
     
@@ -90,7 +90,7 @@ def generate_local(target_property=3.5):
     print("Generating on CPU. This will be slow, please wait...")
     
     input_ids = torch.full((1, 32), tokenizer.mask_token_id, device="cpu")
-    cond = torch.tensor([[target_property]], dtype=torch.float16, device="cpu")
+    cond = torch.tensor([[target_property]], dtype=torch.float32, device="cpu")
     
     with torch.no_grad():
         for t_val in torch.linspace(1, 0, 50): 
